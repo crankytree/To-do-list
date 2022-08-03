@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb+srv://admin-ankit:Test123@cluster0.atlqzux.mongodb.net/todolistDB?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://admin-ankit:Test123@cluster0.atlqzux.mongodb.net/todolistDB");
 
 const itemsSchema = new mongoose.Schema({
   name: String
