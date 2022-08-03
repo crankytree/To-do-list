@@ -32,7 +32,7 @@ const item3 = new Item({
   name: "Eat Food"
 });
 
-const defaultArray = [item1 , item2 , item3];
+const defaultArray = [];
 
 const listsSchema = new mongoose.Schema({
   name: String,
