@@ -45,26 +45,16 @@ const List = new mongoose.model("List" , listsSchema);
 
 app.get("/", function(req, res) {
 
+
+
   Item.find({} , function(err , results){
 
-    if(results.length === 0){
-      Item.insertMany(defaultArray , err => {
-        if(err){
-          console.log(err);
-        }
-        else {
-          console.log("success");
-        }
-      });
-      res.redirect("/");
-    }
-
-    else{
+    
       res.render("list", {
         listTitle: "Today",
         newListItems: results
       });
-    }
+
 
   });
 });
